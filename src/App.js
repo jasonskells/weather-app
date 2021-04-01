@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import moment, { now, updateLocale } from 'moment';
 
 const weatherAPI = {
-  key: "8df346d4834424c3f0d161607ab61f61",
+  key: "",    // api key is hidden
   base: "http://api.openweathermap.org/data/2.5/"
 }
 
-// if possible, implementing a ticking clock could look more appealing than a static one
 function dates() {
   return (moment().format('MMMM Do YYYY'));
 }
@@ -31,13 +30,6 @@ function App() {
         });
     }
   }
-
-  // RESTCountries API call
-  // fetch(`https://restcountries.eu/rest/v2/name/${weather.sys.country}`)
-  //   .then(countryRes => {
-  //     countryRes.json();
-  //     console.log(countryRes);
-  //   });
 
   return (
       <div className={
